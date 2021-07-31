@@ -1,6 +1,6 @@
 html {
   height: 100%;
-  background: black;
+  
 }
 
 body {
@@ -9,8 +9,11 @@ body {
 }
 
 img {
-  display: block;
-  width: 100%;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  
 }
 
 .add-button {
@@ -19,9 +22,6 @@ img {
   left: 1px;
 }
 
-@media (orientation: landscape) {
-  img {
-    height: 100%;
-    object-fit: cover;
-  }
-}
+
+/* "start_url": "/pwa-examples/a2hs/index.html" 
+caller ce code a la place de l'url si on veut faire une page de aceuil personnalisé*/

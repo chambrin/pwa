@@ -9,19 +9,22 @@ body {
 }
 
 img {
-  width: 20px;
-  height: 20px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  
+  width: 50px;
+  height: 50px;
+
 }
+.box1 {
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+
 
 .add-button {
   position: absolute;
   top: 1px;
   left: 1px;
 }
-
-
-/* "start_url": "/pwa-examples/a2hs/index.html" 
-caller ce code a la place de l'url si on veut faire une page de aceuil personnalisé*/

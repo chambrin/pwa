@@ -17,14 +17,19 @@ pipelines:
           name: 'Lint'
           script:
             - echo "Your linting goes here..."
-            - pipe: sonarsource/sonarcloud-scan:1.2.1
-            - pipe: sonarsource/sonarcloud-quality-gate:0.1.4
+            
+            
       - step:
           name: 'Security scan'
           script:
             - echo "Your security scan goes here..."
 
     # The following deployment steps will be executed for each pipeline run. To configure your steps and conditionally deploy see https://support.atlassian.com/bitbucket-cloud/docs/configure-bitbucket-pipelinesyml/
+    - step:
+        name: 'Sonar'
+        script:
+            - pipe: sonarsource/sonarcloud-scan:1.2.1
+            - pipe: sonarsource/sonarcloud-quality-gate:0.1.4
     - step:
         name: 'Deployment to Staging'
         deployment: staging
@@ -36,4 +41,3 @@ pipelines:
         trigger: 'manual'
         script:
           - echo "Your deployment to production script goes here..."
-       
